@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.9 on win32)" generated="2026-05-10T12:37:01.296033" rpa="false" schemaversion="5">
+<suite id="s1" name="DAY-1" source="D:\D drive\Python_programs\TestRobot\RFP\DAY-1.robot">
+<test id="s1-t1" name="OPEN LOGIN APPLICATION" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-10T12:37:01.971747" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/2018/09/automation-form.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-10T12:37:01.971747" elapsed="6.420447"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-10T12:37:08.392194" level="INFO">Typing text 'hi' into text field 'name'.</msg>
+<arg>name</arg>
+<arg>hi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-10T12:37:08.392194" elapsed="0.181429"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-10T12:37:08.573623" level="INFO">Typing text 'hello' into text field 'email'.</msg>
+<arg>email</arg>
+<arg>hello</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-10T12:37:08.573623" elapsed="0.143562"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-10T12:37:08.717185" level="INFO">Typing text 'ok' into text field 'phone'.</msg>
+<arg>phone</arg>
+<arg>ok</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-10T12:37:08.717185" elapsed="0.117904"/>
+</kw>
+<status status="PASS" start="2026-05-10T12:37:01.971747" elapsed="6.863342"/>
+</test>
+<status status="PASS" start="2026-05-10T12:37:01.296033" elapsed="7.539056"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DAY-1" id="s1" pass="1" fail="0" skip="0">DAY-1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

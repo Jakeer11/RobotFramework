@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.9 on win32)" generated="2026-01-24T10:24:37.416508" rpa="false" schemaversion="5">
+<suite id="s1" name="DDT1" source="D:\Python_programs\TestRobot\NopEcomm\DDT1.robot">
+<test id="s1-t1" name="Verify User Exists In DB" line="13">
+<kw name="Connect To MySQL">
+<kw name="Connect To Database Using Custom Params" owner="DatabaseLibrary">
+<msg time="2026-01-24T10:24:37.572364" level="WARN">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' is deprecated. Use new `Connect To Database` keyword with custom parameters instead.
+The deprecated keyword will be removed in future versions.</msg>
+<msg time="2026-01-24T10:24:37.572364" level="FAIL">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' expected 0 to 3 non-named arguments, got 6.</msg>
+<arg>pymysql</arg>
+<arg>${DB_NAME}</arg>
+<arg>${DB_USER}</arg>
+<arg>${DB_PASSWORD}</arg>
+<arg>${DB_HOST}</arg>
+<arg>${DB_PORT}</arg>
+<doc>*DEPRECATED* Use new `Connect To Database` keyword with custom parameters instead.
+The deprecated keyword will be removed in future versions.</doc>
+<status status="FAIL" start="2026-01-24T10:24:37.572364" elapsed="0.000000">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' expected 0 to 3 non-named arguments, got 6.</status>
+</kw>
+<status status="FAIL" start="2026-01-24T10:24:37.556760" elapsed="0.015604">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' expected 0 to 3 non-named arguments, got 6.</status>
+</kw>
+<kw name="Row Count" owner="DatabaseLibrary">
+<var>${count}</var>
+<arg>SELECT * FROM users WHERE email='admin@yourStore.com';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the number of rows in the result.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Row Count" owner="DatabaseLibrary">
+<var>${count}</var>
+<arg>SELECT * FROM orders;</arg>
+<doc>Runs a query with the ``select_statement`` and returns the number of rows in the result.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${count}</arg>
+<arg>10</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<var>${result}</var>
+<arg>SELECT firstname FROM users WHERE id=1;</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Sql String" owner="DatabaseLibrary">
+<arg>INSERT INTO users(name,email) VALUES ('TestUser','test@gmail.com');</arg>
+<doc>Executes the ``sql_string`` - as a single SQL command (default) or as separate statements.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Row Count" owner="DatabaseLibrary">
+<var>${count}</var>
+<arg>SELECT * FROM users WHERE email='test@gmail.com';</arg>
+<doc>Runs a query with the ``select_statement`` and returns the number of rows in the result.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<kw name="Disconnect From Database" owner="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<status status="NOT RUN" start="2026-01-24T10:24:37.572364" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-24T10:24:37.556760" elapsed="0.015604">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' expected 0 to 3 non-named arguments, got 6.</status>
+</test>
+<status status="FAIL" start="2026-01-24T10:24:37.416508" elapsed="0.155856"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DDT1" id="s1" pass="0" fail="1" skip="0">DDT1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-24T10:24:37.572364" level="WARN">Keyword 'DatabaseLibrary.Connect To Database Using Custom Params' is deprecated. Use new `Connect To Database` keyword with custom parameters instead.
+The deprecated keyword will be removed in future versions.</msg>
+</errors>
+</robot>

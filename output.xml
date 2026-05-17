@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.9 on win32)" generated="2026-03-04T22:35:49.724932" rpa="false" schemaversion="5">
+<suite id="s1" name="Alerts" source="D:\Python_programs\TestRobot\alerts.robot">
+<test id="s1-t1" name="TC001" line="9">
+<kw name="ALERTSHANDLING">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-04T22:35:50.624572" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-04T22:35:50.624572" elapsed="15.013503"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-04T22:36:05.638075" elapsed="14.371252"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-04T22:36:20.017909" level="INFO">Clicking element 'id:alertBtn'.</msg>
+<arg>id:alertBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-04T22:36:20.009327" elapsed="0.168718"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2026-03-04T22:36:20.178045" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>I am an alert box!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2026-03-04T22:36:20.178045" elapsed="0.019965"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-03-04T22:36:20.198010" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2026-03-04T22:36:26.038083" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-04T22:36:26.038083" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2026-03-04T22:36:20.198010" elapsed="5.848155">Alert not found in 5 seconds.</status>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>dismiss</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-03-04T22:36:26.046165" elapsed="0.000000"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>leave</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-03-04T22:36:26.048180" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-03-04T22:35:50.622295" elapsed="35.425885">Alert not found in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-03-04T22:35:50.613225" elapsed="35.452039">Alert not found in 5 seconds.</status>
+</test>
+<status status="FAIL" start="2026-03-04T22:35:49.728497" elapsed="36.964717"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Alerts" id="s1" pass="0" fail="1" skip="0">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
